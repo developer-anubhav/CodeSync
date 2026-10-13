@@ -4,7 +4,7 @@ import { useState } from "react";
 import { AppHeader } from "@/components/layout/AppHeader";
 import { Sidebar } from "@/components/layout/Sidebar";
 import { StatusBar } from "@/components/layout/StatusBar";
-import { EditorPlaceholder } from "@/components/layout/EditorPlaceholder";
+import { EditorWorkspace } from "@/components/editor/EditorWorkspace";
 import { CollaborationDialog } from "@/components/dialogs/CollaborationDialog";
 import { SettingsDialog } from "@/components/dialogs/SettingsDialog";
 import type { WorkspaceState } from "@/types";
@@ -40,7 +40,7 @@ export function AppShell() {
           onSettingsClick={openSettingsDialog}
           sidebarCollapsed={sidebarCollapsed}
         />
-        <EditorPlaceholder />
+        <EditorWorkspace />
         <StatusBar workspaceMode={workspace.mode} />
       </div>
       <CollaborationDialog isOpen={showCollaborationDialog} onClose={closeCollaborationDialog} />
